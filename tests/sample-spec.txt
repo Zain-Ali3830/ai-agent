@@ -1,0 +1,16 @@
+Feature: Login Page
+
+The login page has:
+- An email input field
+- A password input field
+- A "Log In" button
+- A "Forgot password?" link
+
+When a user enters a valid email and password and clicks "Log In", they should be redirected
+to the dashboard page and see a welcome message with their name.
+
+When a user enters an invalid email format, an inline error message "Please enter a valid
+email address" should appear below the email field.
+
+When a user leaves the password field empty and clicks "Log In", an inline error message
+"Password is required" should appear below the password field.

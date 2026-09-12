@@ -1,0 +1,29 @@
+{
+  "name": "qa-automation-agent",
+  "version": "1.0.0",
+  "description": "Conversational AI QA agent: spec file -> approved test cases -> Playwright TypeScript automation via Claude + Playwright MCP",
+  "type": "commonjs",
+  "bin": {
+    "qa-agent": "./dist/src/agent.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "ts-node src/agent.ts",
+    "postinstall": "echo Run: npx playwright install"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@playwright/test": "^1.48.0",
+    "dotenv": "^16.4.5",
+    "mammoth": "^1.8.0",
+    "pdf-parse": "^1.1.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/prompts": "^2.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
