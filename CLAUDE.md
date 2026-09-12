@@ -1,5 +1,12 @@
 # QA Automation Agent — Project Notes
 
+> **Two implementations exist.** This file documents the standalone Node.js/Anthropic-API CLI
+> below. There is also a no-API-cost version as a Claude Code skill at
+> `.claude/skills/qa-automation-agent/SKILL.md` in this same project — run it by asking Claude
+> Code to run the QA automation agent, or via `/qa-automation-agent`. That version covers
+> positive/negative/edge test cases, saves them to `test-cases.xlsx`, and prioritizes `id`
+> locators. Prefer the skill unless you specifically need the standalone CLI tool.
+
 This project is a conversational CLI agent (TypeScript/Node) that:
 1. Reads a spec file (.txt/.pdf/.docx /.md).
 2. Uses Claude to generate structured UI test cases (id, title, steps, expectedResult).
